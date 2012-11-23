@@ -1,0 +1,605 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.sky {
+	background: #25c9ea;
+	background: url(data: image/svg+xml;
+	base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1YzllYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgxJSIgc3RvcC1jb2xvcj0iI2M5ZjBmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOWYwZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+	background: -webkit-linear-gradient(top, #25c9ea 0%, #c9f0ff 81%, #c9f0ff 100%);
+	background: -moz-linear-gradient(top, #25c9ea 0%, #c9f0ff 81%, #c9f0ff 100%);
+	background: -o-linear-gradient(top, #25c9ea 0%, #c9f0ff 81%, #c9f0ff 100%);
+	background: -ms-linear-gradient(top, #25c9ea 0%, #c9f0ff 81%, #c9f0ff 100%);
+	background: linear-gradient(top, #25c9ea 0%, #c9f0ff 81%, #c9f0ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25c9ea', endColorstr='#c9f0ff',GradientType=0 );
+}
+
+.clouds {
+	width: 200%;
+	height: 350px;
+	position: absolute;
+	background: url('../img/fog.png') no-repeat 0% 0px, url('../img/fog.png') no-repeat 23% 60px, url('../img/fog.png') no-repeat 48% 10px, url('../img/fog.png') no-repeat 62% 40px, url('../img/fog.png') no-repeat 85% 0px, url('../img/fog.png') no-repeat 101% 70px, url('../img/fog.png') no-repeat 124% 20px, url('../img/fog.png') no-repeat 148% 60px, url('../img/fog.png') no-repeat 161% 30px, url('../img/fog.png') no-repeat 174% 0px;
+	z-index: 49;
+	top: -60px;
+
+	-webkit-animation: building 60s linear infinite;
+	-moz-animation: building 60s linear infinite;
+	-ms-animation: building 60s linear infinite;
+	-o-animation: building 60s linear infinite;
+	animation: building 60s linear infinite;
+}
+
+.concrete-road {
+	width: 200%;
+	height: 58px;
+	position: absolute;
+	z-index: 97;
+	bottom: 163px;
+	left: 0;
+	background: url('../img/concrete-road.png') repeat-x;
+
+	-webkit-animation: road 3s linear infinite;
+	-moz-animation: road 3s linear infinite;
+	-ms-animation: road 3s linear infinite;
+	-o-animation: road 3s linear infinite;
+	animation: road 3s linear infinite;
+}
+
+.road-gril {
+	width: 200%;
+	height: 38px;
+	position: absolute;
+	z-index: 97;
+	bottom: 125px;
+	left: 0;
+	background: url('../img/road-gril.png') repeat-x;
+
+	-webkit-animation: road 2s linear infinite;
+	-moz-animation: road 2s linear infinite;
+	-ms-animation: road 2s linear infinite;
+	-o-animation: road 2s linear infinite;
+	animation: road 2s linear infinite;
+}
+
+.road {
+	width: 200%;
+	height: 130px;
+	position: absolute;
+	z-index: 99;
+	bottom: 0;
+	left: 0;
+	background: url('../img/road.png') repeat-x 0px -5px;
+
+	-webkit-animation: road 1s linear infinite;
+	-moz-animation: road 1s linear infinite;
+	-ms-animation: road 1s linear infinite;
+	-o-animation: road 1s linear infinite;
+	animation: road 1s linear infinite;
+}
+
+.building-layer.first {
+	width: 200%;
+	height: 150px;
+	position: absolute;
+	background: url('../img/buildings-2.png') no-repeat 0% 0px, url('../img/buildings-1.png') no-repeat 10% 0px, url('../img/buildings-2.png') no-repeat 20% 0px, url('../img/buildings-1.png') no-repeat 25% 0px, url('../img/buildings-2.png') no-repeat 32% 0px, url('../img/buildings-2.png') no-repeat 35% 0px, url('../img/buildings-1.png') no-repeat 46% 0px, url('../img/buildings-2.png') no-repeat 50% 0px, url('../img/buildings-1.png') no-repeat 61% 0px, url('../img/buildings-2.png') no-repeat 74% 0px, url('../img/buildings-1.png') no-repeat 80% 0px, url('../img/buildings-2.png') no-repeat 99% 0px, url('../img/buildings-1.png') no-repeat 105% 0px, url('../img/buildings-2.png') no-repeat 120% 0px, url('../img/buildings-2.png') no-repeat 135% 0px, url('../img/buildings-1.png') no-repeat 146% 0px, url('../img/buildings-2.png') no-repeat 150% 0px, url('../img/buildings-1.png') no-repeat 161% 0px, url('../img/buildings-2.png') no-repeat 174% 0px, url('../img/buildings-1.png') no-repeat 180% 0px, url('../img/buildings-2.png') no-repeat 199% 0px;
+	z-index: 59;
+	bottom: 220px;
+
+	-webkit-animation: building 30s linear infinite;
+	-moz-animation: building 30s linear infinite;
+	-ms-animation: building 30s linear infinite;
+	-o-animation: building 30s linear infinite;
+	animation: building 30s linear infinite;
+}
+
+.building-layer.second {
+	width: 200%;
+	height: 150px;
+	position: absolute;
+	background: url('../img/buildings-2.png') no-repeat 10% 0px, url('../img/buildings-1.png') no-repeat 15% 0px, url('../img/buildings-2.png') no-repeat 24% 0px, url('../img/buildings-1.png') no-repeat 35% 0px, url('../img/buildings-2.png') no-repeat 41% 0px, url('../img/buildings-2.png') no-repeat 44% 0px, url('../img/buildings-1.png') no-repeat 48% 0px, url('../img/buildings-2.png') no-repeat 55% 0px, url('../img/buildings-1.png') no-repeat 66% 0px, url('../img/buildings-2.png') no-repeat 71% 0px, url('../img/buildings-1.png') no-repeat 85% 0px, url('../img/buildings-2.png') no-repeat 102% 0px, url('../img/buildings-1.png') no-repeat 115% 0px, url('../img/buildings-2.png') no-repeat 125% 0px, url('../img/buildings-2.png') no-repeat 140% 0px, url('../img/buildings-1.png') no-repeat 144% 0px, url('../img/buildings-2.png') no-repeat 154% 0px, url('../img/buildings-1.png') no-repeat 165% 0px, url('../img/buildings-2.png') no-repeat 178% 0px, url('../img/buildings-1.png') no-repeat 183% 0px, url('../img/buildings-2.png') no-repeat 191% 0px;
+	z-index: 57;
+	bottom: 218px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+
+	-webkit-animation: building 35s linear infinite;
+	-moz-animation: building 35s linear infinite;
+	-ms-animation: building 35s linear infinite;
+	-o-animation: building 35s linear infinite;
+	animation: building 35s linear infinite;
+}
+
+.building-layer.third {
+	width: 200%;
+	height: 150px;
+	position: absolute;
+	background: url('../img/buildings-2.png') no-repeat 5% 0px, url('../img/buildings-1.png') no-repeat 12% 0px, url('../img/buildings-2.png') no-repeat 21% 0px, url('../img/buildings-1.png') no-repeat 37% 0px, url('../img/buildings-2.png') no-repeat 42% 0px, url('../img/buildings-2.png') no-repeat 48% 0px, url('../img/buildings-1.png') no-repeat 51% 0px, url('../img/buildings-2.png') no-repeat 54% 0px, url('../img/buildings-1.png') no-repeat 58% 0px, url('../img/buildings-2.png') no-repeat 61% 0px, url('../img/buildings-1.png') no-repeat 68% 0px, url('../img/buildings-2.png') no-repeat 82% 0px, url('../img/buildings-1.png') no-repeat 90% 0px, url('../img/buildings-2.png') no-repeat 95% 0px, url('../img/buildings-2.png') no-repeat 110% 0px, url('../img/buildings-1.png') no-repeat 115% 0px, url('../img/buildings-2.png') no-repeat 120% 0px, url('../img/buildings-1.png') no-repeat 131% 0px, url('../img/buildings-2.png') no-repeat 143% 0px, url('../img/buildings-1.png') no-repeat 160% 0px, url('../img/buildings-2.png') no-repeat 180% 0px;
+	z-index: 55;
+	bottom: 215px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+
+	-webkit-animation: building 40s linear infinite;
+	-moz-animation: building 40s linear infinite;
+	-ms-animation: building 40s linear infinite;
+	-o-animation: building 40s linear infinite;
+	animation: building 40s linear infinite;
+}
+
+.building-layer.fourth {
+	width: 200%;
+	height: 150px;
+	position: absolute;
+	background: url('../img/buildings-2.png') no-repeat 2% 0px, url('../img/buildings-1.png') no-repeat 15% 0px, url('../img/buildings-2.png') no-repeat 24% 0px, url('../img/buildings-1.png') no-repeat 27% 0px, url('../img/buildings-2.png') no-repeat 29% 0px, url('../img/buildings-2.png') no-repeat 79% 0px, url('../img/buildings-1.png') no-repeat 100% 0px, url('../img/buildings-2.png') no-repeat 119% 0px, url('../img/buildings-1.png') no-repeat 127% 0px, url('../img/buildings-2.png') no-repeat 130% 0px, url('../img/buildings-1.png') no-repeat 138% 0px, url('../img/buildings-2.png') no-repeat 146% 0px, url('../img/buildings-1.png') no-repeat 149% 0px, url('../img/buildings-2.png') no-repeat 153% 0px, url('../img/buildings-2.png') no-repeat 158% 0px, url('../img/buildings-1.png') no-repeat 167% 0px, url('../img/buildings-2.png') no-repeat 172% 0px, url('../img/buildings-1.png') no-repeat 178% 0px, url('../img/buildings-2.png') no-repeat 182% 0px, url('../img/buildings-1.png') no-repeat 188% 0px, url('../img/buildings-2.png') no-repeat 191% 0px;
+	z-index: 53;
+	bottom: 210px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+
+	-webkit-animation: building 45s linear infinite;
+	-moz-animation: building 45s linear infinite;
+	-ms-animation: building 45s linear infinite;
+	-o-animation: building 45s linear infinite;
+	animation: building 45s linear infinite;
+}
+
+@keyframes "building" {
+ from {
+    left: 0%;
+ }
+ to {
+    left: -100%;
+ }
+
+}
+
+@-moz-keyframes building {
+ from {
+   left: 0%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-webkit-keyframes "building" {
+ from {
+   left: 0%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-ms-keyframes "building" {
+ from {
+   left: 0%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-o-keyframes "building" {
+ from {
+   left: 0%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@keyframes "road" {
+ from {
+    left: 0%;
+ }
+ to {
+    left: -100%;
+ }
+
+}
+
+@-moz-keyframes road {
+ from {
+   left: 0%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-webkit-keyframes "road" {
+ from {
+   left: 0%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-ms-keyframes "road" {
+ from {
+   left: 0%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-o-keyframes "road" {
+ from {
+   left: 0%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@keyframes "righttoleft" {
+ from {
+    left: 200%;
+ }
+ to {
+    left: -100%;
+ }
+
+}
+
+@-moz-keyframes righttoleft {
+ from {
+   left: 200%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-webkit-keyframes "righttoleft" {
+ from {
+   left: 200%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-ms-keyframes "righttoleft" {
+ from {
+   left: 200%;
+ }
+ to {
+   left: -100%;
+ }
+
+}
+
+@-webkit-keyframes building {
+	from{
+        left: 0%;
+    }
+    to{
+        left: -200%;
+    }
+}
+@-webkit-keyframes road {
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@-webkit-keyframes righttoleft {
+    from{
+        left: 200%;
+    }
+    to{
+        left: -100%;
+    }
+@-o-keyframes "righttoleft" {
+ from {
+   left: 200%;
+ }
+ to {
+   left: -100%;
+ }
+}
+
+.vehicle {
+	width: 340px;
+	height: 200px;
+	position: absolute;
+	z-index: 199;
+	bottom: 15px;
+	left: 100px;
+}
+
+.vehicle .biker {
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+
+.vehicle .wheel {
+	width: 100px;
+	z-index: 7;
+	position: absolute;
+
+	-webkit-animation: rotating 0.5s linear infinite;
+	-moz-animation: rotating 0.5s linear infinite;
+	-ms-animation: rotating 0.5s linear infinite;
+	-o-animation: rotating 0.5s linear infinite;
+	animation: rotating 0.5s linear infinite;
+}
+
+@keyframes "rotating" {
+ from {
+    -webkit-transform: rotate(0deg);
+   	-moz-transform: rotate(0deg);
+   	-o-transform: rotate(0deg);
+   	-ms-transform: rotate(0deg);
+   	transform: rotate(0deg);
+ }
+ to {
+    -webkit-transform: rotate(360deg);
+   	-moz-transform: rotate(360deg);
+   	-o-transform: rotate(360deg);
+   	-ms-transform: rotate(360deg);
+   	transform: rotate(360deg);
+ }
+
+}
+
+@-moz-keyframes rotating {
+ from {
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -moz-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-webkit-keyframes "rotating" {
+ from {
+   -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -webkit-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-ms-keyframes "rotating" {
+ from {
+   -ms-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -ms-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-o-keyframes "rotating" {
+ from {
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -o-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+.vehicle .wheel.front {
+	width: 91px;
+	bottom: 23px;
+	right: -2px;
+}
+
+.vehicle .wheel.back {
+	width: 80px;
+	bottom: 22px;
+	left: 18px;
+}
+
+.vehicle:hover {
+	-webkit-animation: dowheeling 3s ease-in-out 1;
+	-moz-animation: dowheeling 3s ease-in-out 1;
+	-ms-animation: dowheeling 3s ease-in-out 1;
+	-o-animation: dowheeling 3s ease-in-out 1;
+	animation: dowheeling 3s ease-in-out 1;
+}
+
+@keyframes "dowheeling" {
+ 0% {
+    -webkit-transform: rotate(0deg);
+   	-moz-transform: rotate(0deg);
+   	-o-transform: rotate(0deg);
+   	-ms-transform: rotate(0deg);
+   	transform: rotate(0deg);
+   	-webkit-transform-origin: 10% 100%;
+   	-moz-transform-origin: 10% 100%;
+   	-o-transform-origin: 10% 100%;
+   	-ms-transform-origin: 10% 100%;
+   	transform-origin: 10% 100%;
+ }
+ 50% {
+    -webkit-transform: rotate(-35deg);
+   	-moz-transform: rotate(-35deg);
+   	-o-transform: rotate(-35deg);
+   	-ms-transform: rotate(-35deg);
+   	transform: rotate(-35deg);
+   	-webkit-transform-origin: 10% 100%;
+   	-moz-transform-origin: 10% 100%;
+   	-o-transform-origin: 10% 100%;
+   	-ms-transform-origin: 10% 100%;
+   	transform-origin: 10% 100%;
+ }
+ 100% {
+    -webkit-transform: rotate(0deg);
+   	-moz-transform: rotate(0deg);
+   	-o-transform: rotate(0deg);
+   	-ms-transform: rotate(0deg);
+   	transform: rotate(0deg);
+   	-webkit-transform-origin: 10% 100%;
+   	-moz-transform-origin: 10% 100%;
+   	-o-transform-origin: 10% 100%;
+   	-ms-transform-origin: 10% 100%;
+   	transform-origin: 10% 100%;
+ }
+
+}
+
+@-moz-keyframes dowheeling {
+ 0% {
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -moz-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+ 50% {
+   -moz-transform: rotate(-35deg);
+   transform: rotate(-35deg);
+   -moz-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+ 100% {
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -moz-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+
+}
+
+@-webkit-keyframes "dowheeling" {
+ 0% {
+   -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -webkit-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+ 50% {
+   -webkit-transform: rotate(-35deg);
+   transform: rotate(-35deg);
+   -webkit-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+ 100% {
+   -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -webkit-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+
+}
+
+@-ms-keyframes "dowheeling" {
+ 0% {
+   -ms-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -ms-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+ 50% {
+   -ms-transform: rotate(-35deg);
+   transform: rotate(-35deg);
+   -ms-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+ 100% {
+   -ms-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -ms-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+
+}
+
+@-o-keyframes "dowheeling" {
+ 0% {
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -o-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+ 50% {
+   -o-transform: rotate(-35deg);
+   transform: rotate(-35deg);
+   -o-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+ 100% {
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -o-transform-origin: 10% 100%;
+   transform-origin: 10% 100%;
+ }
+
+}
+
+.metro-track {
+	width: 200%;
+	height: 67px;
+	position: absolute;
+	z-index: 79;
+	bottom: 215px;
+	left: 0;
+	background: url('../img/metro-track.png') repeat-x 0px 0px;
+
+	-webkit-animation: road 10s linear infinite;
+	-moz-animation: road 10s linear infinite;
+	-ms-animation: road 10s linear infinite;
+	-o-animation: road 10s linear infinite;
+	animation: road 10s linear infinite;
+}
+
+.metro-train {
+	width: 400%;
+	height: 20px;
+	position: absolute;
+	z-index: 69;
+	bottom: 281px;
+	left: 0;
+	background: url('../img/metro-train.png') no-repeat;
+
+	-webkit-animation: righttoleft 8s linear infinite;
+	-moz-animation: righttoleft 8s linear infinite;
+	-ms-animation: righttoleft 8s linear infinite;
+	-o-animation: righttoleft 8s linear infinite;
+	animation: righttoleft 8s linear infinite;
+}
